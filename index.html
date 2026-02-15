@@ -116,8 +116,46 @@
       </div>
     </section>
 
-    
+    <!-- Trending / Top rated -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Top Rated</h2>
+        <div id="trending-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
 
+    <!-- Our Products -->
+    <section id="products" class="py-12 md:py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-8">Our Products</h2>
+        <div id="category-filters" class="flex flex-wrap justify-center gap-2 mb-8">
+          <button type="button" data-category="all" class="category-btn px-5 py-2 rounded-full font-medium bg-primary text-white">All</button>
+          <!-- More categories injected by JS -->
+        </div>
+        <div id="products-loading" class="flex justify-center py-12 hidden">
+          <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+        </div>
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product cards injected by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product detail modal -->
+  <div id="product-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div class="fixed inset-0 bg-black/60" id="modal-backdrop"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div id="modal-content" class="bg-white rounded-2xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 relative">
+        <button type="button" id="modal-close" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600" aria-label="Close">&times;</button>
+        <div id="modal-body"><!-- Filled by JS --></div>
+      </div>
+    </div>
+  </div>
+
+ 
   <script src="main.js"></script>
 </body>
 </html>
